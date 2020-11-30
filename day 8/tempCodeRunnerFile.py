@@ -1,0 +1,2 @@
+
+            final = first * second
