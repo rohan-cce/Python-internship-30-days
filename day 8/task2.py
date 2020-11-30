@@ -7,7 +7,7 @@ while 1:
     print ("0) Exit")
 
     try:  # This is a try statement used to handle errors
-        answer = input("Option: ")  
+        answer = int(input("Option: "))  
         if answer == 1:  
             first = float(input("First Number: "))  
             second = float(input("Second Number: "))  
