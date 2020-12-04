@@ -1,5 +1,9 @@
-def addition(n): 
-    return n + n 
-numbers = (1, 2, 3, 4) 
-result = map(addition, numbers) 
-print(list(result)) 
+def merge(l1, l2): 
+      
+    m = [(l1[i], l2[i]) for i in range(0, len(l1))] 
+    return m 
+      
+# Driver code 
+l1 = [1, 2, 3] 
+l2 = ['a', 'b', 'c'] 
+print(merge(l1, l2)) 
