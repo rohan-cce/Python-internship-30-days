@@ -14,16 +14,16 @@ class coffee:
               "----MONEY = $",self.money)
         
     def cof_val(self):
-        self.cof_w=int(input("\nENTER THE AMOUNT OF WATER YOU WANT TO ADD IN YOUR DRINK(in ml) : "))
-        self.cof_m=int(input("ENTER THE AMOUNT OF MILK YOU WANT TO ADD IN YOUR DRINK(in ml) : "))
-        self.cof_c=int(input("ENTER THE AMOUNT OF COFFEE YOU WANT TO ADD IN YOUR DRINK(in ml) : "))
+        self.cof_w=int(input("\nEnter The Amount of Water You Want To Add In Your Drink(in ml) : "))
+        self.cof_m=int(input("\nEnter The Amount of Milk You Want To Add In Your Drink(in ml) : "))
+        self.cof_c=int(input("\nEnter The Amount of Coffee You Want To Add In Your Drink(in ml) : "))
 
         if(self.cof_w > self.water):
-            print("Sorry there is not enough water resource !!!!!")
+            print("Sorry there is not enough water resource ")
         if(self.cof_m > self.milk):
-            print("Sorry there is not enough milk resource !!!!!")
+            print("Sorry there is not enough milk resource ")
         if(self.cof_c > self.coffee):
-            print("Sorry there is not enough coffee resource !!!!!")
+            print("Sorry there is not enough coffee resource ")
 
     def set(self):
         self.check=0
@@ -76,11 +76,11 @@ class coffee:
 
 C = coffee(500,500,500,100)
 
-print("*****  WELCOME TO KOFFEE KICKS  ******")
 
-run=1000
 
-print("\nTHE MACHINE WILL SERVE THE CUSTOMERS FOR 1000 TIMES \n\n ENJOY THE COFFEE")
+run=100
+
+print("\nThe Machine Will Serve The Customers for 100 times")
 
 machine=input("\nStatus of the coffee machine (on/off): ")
 
