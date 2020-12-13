@@ -2,7 +2,7 @@
 
 Task Given by Best enlist 
 30 days Python Internship 
-Create a file named urls.txt and add links in the text file
+Add the links to scan in urls.txt 
 Usage :-
         Open command line in the same directory of the python file
         Then Type  python Malicious_url_scanner -t url -p urls.txt
