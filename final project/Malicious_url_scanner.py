@@ -70,7 +70,6 @@ def url_scanner(api,url_path,type_url):
                                       f"https://virustotal.com/gui/url/{values['data']['id']}/detection"))
 
                 except Exception:
-                    # Possible error causes; not valid domain pattern or Domain not found in VT Database. If the reasons is not these, please don't be hesitate for contact me.
                     print(values['error']['message'])
                     
                 time.sleep(15)
