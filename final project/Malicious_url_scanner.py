@@ -86,8 +86,8 @@ def main():
         api = input("\n Enter your API key: ")
         print("\n\n")
 
-        parser = argparse.ArgumentParser(description='You can submit multiple file hashes and urls with this script.')
-        parser.add_argument("-t","--type",help="You should type what you want for submitting VT (url or file or domain).",required=True)
+        
+        parser.add_argument("-t","--type",help="You should type what you want for submitting VT (url).",required=True)
         parser.add_argument("-p","--path",help="Type file path",required=True)
     
         args=parser.parse_args()
