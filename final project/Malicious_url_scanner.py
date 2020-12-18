@@ -2,10 +2,10 @@
 
 Task Given by Best enlist 
 30 days Python Internship 
-Add the links to scan in urls.txt 
+Create a file named urls.txt and add links in the text file
 Usage :-
         Open command line in the same directory of the python file
-        Then Type  python Malicious_url_scanner -t url -p urls.txt
+        Then Type  python vt-scanner.py -t url -p urls.txt
         Create a Account in virustotal.com and get copy the api key in clipboard
         
 '''
@@ -70,12 +70,13 @@ def url_scanner(api,url_path,type_url):
                                       f"https://virustotal.com/gui/url/{values['data']['id']}/detection"))
 
                 except Exception:
+                    # Possible error causes; not valid domain pattern or Domain not found in VT Database. If the reasons is not these, please don't be hesitate for contact me.
                     print(values['error']['message'])
                     
                 time.sleep(15)
             
             else:
-                print(errors(status,url_vt,type_url,values))
+                print(  (status,url_vt,type_url,values))
     print("Thank you for using this program ! \n The program will exit now")
 def main():
     print("""Sample Usage:
@@ -86,8 +87,8 @@ def main():
         api = input("\n Enter your API key: ")
         print("\n\n")
 
-        
-        parser.add_argument("-t","--type",help="You should type what you want for submitting VT (url).",required=True)
+        parser = argparse.ArgumentParser(description='You can submit multiple file hashes and urls with this script.')
+        parser.add_argument("-t","--type",help="You should type what you want for submitting VT (url or file or domain).",required=True)
         parser.add_argument("-p","--path",help="Type file path",required=True)
     
         args=parser.parse_args()
@@ -103,7 +104,6 @@ def main():
         
  
 if __name__=="__main__":
-    unscanned_hashes = list()
     unscanned_urls = list()
     report_urls = list()
     main()
